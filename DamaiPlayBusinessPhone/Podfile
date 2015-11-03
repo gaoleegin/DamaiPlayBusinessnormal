@@ -1,0 +1,4 @@
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+use_frameworks!
+pod 'Alamofire'

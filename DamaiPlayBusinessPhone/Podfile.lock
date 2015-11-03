@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (3.1.1)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SVProgressHUD (1.1.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 9b0a7188b961a03914a99304488bd226b0e46c0e
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+
+COCOAPODS: 0.39.0
