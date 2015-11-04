@@ -39,9 +39,14 @@ class DMUserLoginViewController: UIViewController {
             return
         }
         
-        DMMValueAndVValue.loadMVValue(userNameString, password: passwordString) { (DMValue) in
+        ///加载用户的数据
+        DMUser.loadUserData(userNameString, password: passwordString) { (user) -> () in
+            ///完成加载用户信息的调用，进行控制器的跳转
+            
+            
             
         }
+        
         
     }
         

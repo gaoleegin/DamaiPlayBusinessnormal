@@ -33,6 +33,7 @@ class DMMValueAndVValue: NSObject,NSCoding {
     
     class func loadMVValue(username:String,password:String,completion:(DMValue: DMMValueAndVValue?)->()) {
         
+        ///url 地址
         let urlString =  "http://wanapi.damai.cn/user/loginforticket.json"
         
         let params = ["passwd":password,"phone":username]
@@ -49,9 +50,6 @@ class DMMValueAndVValue: NSObject,NSCoding {
                     let MVValue = DMMValueAndVValue(dict: MVVauleDict)
                     
                     self.storeMVValue(MVValue)
-                    
-                    
-                    
                     
                     completion(DMValue: MVValue)
                 }
