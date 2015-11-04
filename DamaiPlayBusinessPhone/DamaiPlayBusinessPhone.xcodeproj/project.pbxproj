@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442941421BE98C9200C1CD0F /* DMNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442941411BE98C9200C1CD0F /* DMNetwork.swift */; settings = {ASSET_TAGS = (); }; };
+		442941441BE98D6900C1CD0F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442941431BE98D6900C1CD0F /* UIColor+Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		44C1E4D41BE89A1D00390E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C1E4D31BE89A1D00390E39 /* AppDelegate.swift */; };
 		44C1E4DB1BE89A1D00390E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C1E4DA1BE89A1D00390E39 /* Assets.xcassets */; };
 		44C1E4DE1BE89A1D00390E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C1E4DC1BE89A1D00390E39 /* LaunchScreen.storyboard */; };
@@ -14,6 +16,7 @@
 		44C1E4F41BE89A1E00390E39 /* DamaiPlayBusinessPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C1E4F31BE89A1E00390E39 /* DamaiPlayBusinessPhoneUITests.swift */; };
 		44C1E50C1BE89F6500390E39 /* UserLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C1E50B1BE89F6500390E39 /* UserLogin.storyboard */; settings = {ASSET_TAGS = (); }; };
 		44C1E50E1BE89FAB00390E39 /* DMUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C1E50D1BE89FAB00390E39 /* DMUserLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		44FA0A771BE9AFFD007495CE /* DMMValueAndVValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA0A761BE9AFFD007495CE /* DMMValueAndVValue.swift */; settings = {ASSET_TAGS = (); }; };
 		87B858F875CBB563D42989EF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36E70504EC6CF463D064E8E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		1B9A80E1EED5C6144816E3AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		442941411BE98C9200C1CD0F /* DMNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMNetwork.swift; sourceTree = "<group>"; };
+		442941431BE98D6900C1CD0F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		44C1E4D01BE89A1D00390E39 /* DamaiPlayBusinessPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DamaiPlayBusinessPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C1E4D31BE89A1D00390E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44C1E4DA1BE89A1D00390E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		44C1E4F51BE89A1E00390E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C1E50B1BE89F6500390E39 /* UserLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserLogin.storyboard; sourceTree = "<group>"; };
 		44C1E50D1BE89FAB00390E39 /* DMUserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMUserLoginViewController.swift; sourceTree = "<group>"; };
+		44FA0A761BE9AFFD007495CE /* DMMValueAndVValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMValueAndVValue.swift; sourceTree = "<group>"; };
 		A36E70504EC6CF463D064E8E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD476DDC3EA2ABAA0A0621F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +175,7 @@
 			children = (
 				44C1E50B1BE89F6500390E39 /* UserLogin.storyboard */,
 				44C1E50D1BE89FAB00390E39 /* DMUserLoginViewController.swift */,
+				44FA0A761BE9AFFD007495CE /* DMMValueAndVValue.swift */,
 			);
 			path = UserLogin;
 			sourceTree = "<group>";
@@ -176,6 +183,8 @@
 		44C1E50F1BE8A27E00390E39 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				442941411BE98C9200C1CD0F /* DMNetwork.swift */,
+				442941431BE98D6900C1CD0F /* UIColor+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -378,8 +387,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442941421BE98C9200C1CD0F /* DMNetwork.swift in Sources */,
 				44C1E50E1BE89FAB00390E39 /* DMUserLoginViewController.swift in Sources */,
+				44FA0A771BE9AFFD007495CE /* DMMValueAndVValue.swift in Sources */,
 				44C1E4D41BE89A1D00390E39 /* AppDelegate.swift in Sources */,
+				442941441BE98D6900C1CD0F /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

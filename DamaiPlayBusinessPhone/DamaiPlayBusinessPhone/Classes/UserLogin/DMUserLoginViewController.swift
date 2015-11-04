@@ -24,14 +24,27 @@ class DMUserLoginViewController: UIViewController {
     
     ///登录
     @IBAction func userLogin() {
-        let userNameString = UserName.text;
-        let passwordString = PassWord.text;
         
-        print("用户名\(userNameString)");
-        print("密码\(passwordString)");
         
-        topConstraint.constant -= 20;
+        let userNameString = UserName.text!;
+        let passwordString = PassWord.text!;
+        
+        if(userNameString.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)==0){
+            SVProgressHUD.showInfoWithStatus("用户名不能为空")
+            return
+        }
+        
+        if(passwordString.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)==0){
+            SVProgressHUD.showInfoWithStatus("密码不能为空")
+            return
+        }
+        
+        DMMValueAndVValue.loadMVValue(userNameString, password: passwordString) { (DMValue) in
+            
+        }
+        
     }
+        
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
@@ -45,5 +58,5 @@ class DMUserLoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
