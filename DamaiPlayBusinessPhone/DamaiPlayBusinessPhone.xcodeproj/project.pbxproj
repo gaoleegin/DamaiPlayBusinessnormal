@@ -13,6 +13,8 @@
 		44653C2F1BEAE5F6003A0628 /* DMActiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44653C2E1BEAE5F6003A0628 /* DMActiveModel.swift */; settings = {ASSET_TAGS = (); }; };
 		448102841BEA04170002387F /* ActiveList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448102831BEA04170002387F /* ActiveList.storyboard */; settings = {ASSET_TAGS = (); }; };
 		448102861BEA043B0002387F /* DMActiveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448102851BEA043B0002387F /* DMActiveListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		44ADFA2D1BEB9BE30040AE8C /* ActiveHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ADFA2C1BEB9BE30040AE8C /* ActiveHeader.xib */; settings = {ASSET_TAGS = (); }; };
+		44ADFA2F1BEBA1E70040AE8C /* DMActiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADFA2E1BEBA1E70040AE8C /* DMActiveHeaderView.swift */; settings = {ASSET_TAGS = (); }; };
 		44C1E4D41BE89A1D00390E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C1E4D31BE89A1D00390E39 /* AppDelegate.swift */; };
 		44C1E4DB1BE89A1D00390E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C1E4DA1BE89A1D00390E39 /* Assets.xcassets */; };
 		44C1E4DE1BE89A1D00390E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C1E4DC1BE89A1D00390E39 /* LaunchScreen.storyboard */; };
@@ -50,6 +52,8 @@
 		44653C2E1BEAE5F6003A0628 /* DMActiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMActiveModel.swift; sourceTree = "<group>"; };
 		448102831BEA04170002387F /* ActiveList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActiveList.storyboard; sourceTree = "<group>"; };
 		448102851BEA043B0002387F /* DMActiveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMActiveListViewController.swift; sourceTree = "<group>"; };
+		44ADFA2C1BEB9BE30040AE8C /* ActiveHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActiveHeader.xib; sourceTree = "<group>"; };
+		44ADFA2E1BEBA1E70040AE8C /* DMActiveHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMActiveHeaderView.swift; sourceTree = "<group>"; };
 		44C1E4D01BE89A1D00390E39 /* DamaiPlayBusinessPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DamaiPlayBusinessPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C1E4D31BE89A1D00390E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44C1E4DA1BE89A1D00390E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				448102851BEA043B0002387F /* DMActiveListViewController.swift */,
 				44653C2E1BEAE5F6003A0628 /* DMActiveModel.swift */,
 				440990FC1BEB2AEB00836C7F /* DMActiveListTableViewCell.swift */,
+				44ADFA2C1BEB9BE30040AE8C /* ActiveHeader.xib */,
+				44ADFA2E1BEBA1E70040AE8C /* DMActiveHeaderView.swift */,
 			);
 			path = ActiveList;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				448102841BEA04170002387F /* ActiveList.storyboard in Resources */,
 				44C1E4DE1BE89A1D00390E39 /* LaunchScreen.storyboard in Resources */,
 				44C1E50C1BE89F6500390E39 /* UserLogin.storyboard in Resources */,
+				44ADFA2D1BEB9BE30040AE8C /* ActiveHeader.xib in Resources */,
 				44C1E4DB1BE89A1D00390E39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +416,7 @@
 				448102861BEA043B0002387F /* DMActiveListViewController.swift in Sources */,
 				44FA0A771BE9AFFD007495CE /* DMMValueAndVValue.swift in Sources */,
 				44653C2F1BEAE5F6003A0628 /* DMActiveModel.swift in Sources */,
+				44ADFA2F1BEBA1E70040AE8C /* DMActiveHeaderView.swift in Sources */,
 				44C1E4D41BE89A1D00390E39 /* AppDelegate.swift in Sources */,
 				442941441BE98D6900C1CD0F /* UIColor+Extension.swift in Sources */,
 				44FA0A7B1BE9ECD2007495CE /* DMUser.swift in Sources */,

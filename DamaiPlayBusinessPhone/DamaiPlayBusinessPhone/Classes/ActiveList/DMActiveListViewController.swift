@@ -21,7 +21,19 @@ class DMActiveListViewController: UITableViewController {
         super.viewDidLoad()
         
         
+        ///加载数据
         self.loadData()
+        
+        ///设置头部信息
+        self.setUpTableViewHeader()
+        
+    }
+    
+    
+    private func setUpTableViewHeader(){
+        
+        
+        
         
     }
     
@@ -33,6 +45,17 @@ class DMActiveListViewController: UITableViewController {
             self.tableView.reloadData()
         }
 
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = NSBundle.mainBundle().loadNibNamed("ActiveHeader", owner: self, options: nil).last as! UIView
+        
+        return headerView
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +83,7 @@ class DMActiveListViewController: UITableViewController {
         
         cell.activitModel = model
         
-        print(model.imageUrl)
+    print(model.imageUrl)
  
         return cell
     }

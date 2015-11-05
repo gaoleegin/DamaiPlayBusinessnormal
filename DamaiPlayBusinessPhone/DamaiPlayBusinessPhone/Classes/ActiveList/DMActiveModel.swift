@@ -56,7 +56,7 @@ class DMActiveModel: NSObject {
         
         let urlString = "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do"
         
-        let parameters = ["pageIndex":pageindex,"pageSize":pageSize,"m":DMMValueAndVValue.getMVValue()]
+        let parameters = ["pageIndex":pageindex,"pageSize":30,"m":DMMValueAndVValue.getMVValue()]
         
         DMNetwork.requestJSON(.GET, urlString,parameters:parameters as? [String : AnyObject]) { (JSON) in
             

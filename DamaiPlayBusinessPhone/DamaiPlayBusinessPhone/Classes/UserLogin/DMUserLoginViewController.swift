@@ -44,8 +44,8 @@ class DMUserLoginViewController: UIViewController {
             ///完成加载用户信息的调用，进行控制器的跳转
             let sb = UIStoryboard(name: "ActiveList", bundle: nil)
             
-            let activiVC = sb.instantiateInitialViewController() as! DMActiveListViewController
-            activiVC.user = user
+            let activiVC = sb.instantiateInitialViewController() as! UINavigationController
+            
             
             UIApplication.sharedApplication().keyWindow?.rootViewController = activiVC
             
