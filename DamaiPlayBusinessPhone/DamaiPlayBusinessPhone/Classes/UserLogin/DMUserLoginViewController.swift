@@ -45,6 +45,7 @@ class DMUserLoginViewController: UIViewController {
             let sb = UIStoryboard(name: "ActiveList", bundle: nil)
             
             let activiVC = sb.instantiateInitialViewController() as! DMActiveListViewController
+            activiVC.user = user
             
             UIApplication.sharedApplication().keyWindow?.rootViewController = activiVC
             
