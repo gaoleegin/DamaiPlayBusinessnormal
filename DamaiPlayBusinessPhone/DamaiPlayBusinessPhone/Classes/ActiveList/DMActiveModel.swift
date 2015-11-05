@@ -9,6 +9,13 @@
 import UIKit
 import SVProgressHUD
 
+enum DMProjectStatus:Int{
+    case DMProjectStatusInProgress=2
+    case DMProjectStatusInAlldone=3
+}
+
+
+
 class DMActiveModel: NSObject {
     
     
@@ -22,7 +29,7 @@ class DMActiveModel: NSObject {
         }
     }
     
-    var auditStatus:Int?
+    var auditStatus:DMProjectStatus?
     
     var projectName:String?
     
@@ -34,7 +41,7 @@ class DMActiveModel: NSObject {
     
     init(dict: [String:AnyObject]) {
         //activityInfoDto =
-        auditStatus = dict["auditStatus"] as? Int
+        auditStatus = dict["auditStatus"] as? DMProjectStatus
         projectName = dict["projectName"] as? String
         projectId = dict["projectId"] as? Int
         introduction = dict["introduction"] as? String

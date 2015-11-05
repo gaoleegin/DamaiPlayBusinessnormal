@@ -26,8 +26,16 @@ class DMActiveListTableViewCell: UITableViewCell {
             self.projectNameLabel.text = activitModel?.projectName
             self.projectTimeLabel.text = activitModel?.introduction
             self.projectImage.sd_setImageWithURL(activitModel?.imageUrl)
+
+            if activitModel?.auditStatus ==  DMProjectStatus.DMProjectStatusInProgress{
+                self.projectStatusLabel.backgroundColor = UIColor.colorWithHex("F5B848")
+                self.projectStatusLabel.text = "进行中"
+            } else{
+                self.projectStatusLabel.backgroundColor = UIColor.colorWithHex("BEBEBE")
+                self.projectStatusLabel.text = "已结束"
+
+            }
             
-        
         }
     }
     
