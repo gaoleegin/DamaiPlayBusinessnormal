@@ -23,7 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sb = UIStoryboard(name: "UserLogin", bundle: nil);
         let userLoginVC = sb.instantiateInitialViewController() as! DMUserLoginViewController
         
-        window!.rootViewController = userLoginVC
+        let indexSb = UIStoryboard(name: "ActiveList", bundle: nil)
+        let indexVC = indexSb.instantiateInitialViewController() as! UINavigationController
+        
+        
+        // 通过判断来控制当前的根控制器是哪一个，通过M值来判断
+        if DMMValueAndVValue.getMVValue().lengthOfBytesUsingEncoding(NSUTF8StringEncoding)==0{
+            window!.rootViewController = userLoginVC
+        } else{
+            window?.rootViewController = indexVC
+        }
+        
+        
+        
 
         return true
     }

@@ -99,7 +99,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="验票管理" id="Wmc-lE-KXi">
-                        <barButtonItem key="rightBarButtonItem" image="list_setting" id="m0B-CC-gxZ"/>
+                        <barButtonItem key="rightBarButtonItem" image="list_setting" id="m0B-CC-gxZ">
+                            <connections>
+                                <action selector="settingBtnClicked:" destination="Ge8-5l-TMf" id="vtV-0g-OCY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuP-Ae-eAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,6 +118,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qja-eE-I5A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -13,6 +13,8 @@
 		44653C2F1BEAE5F6003A0628 /* DMActiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44653C2E1BEAE5F6003A0628 /* DMActiveModel.swift */; settings = {ASSET_TAGS = (); }; };
 		448102841BEA04170002387F /* ActiveList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448102831BEA04170002387F /* ActiveList.storyboard */; settings = {ASSET_TAGS = (); }; };
 		448102861BEA043B0002387F /* DMActiveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448102851BEA043B0002387F /* DMActiveListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		44A9E6461BEC45B900B02311 /* DMSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9E6451BEC45B900B02311 /* DMSettingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		44A9E64A1BEC50A000B02311 /* DMSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9E6491BEC50A000B02311 /* DMSettingCell.swift */; settings = {ASSET_TAGS = (); }; };
 		44ADFA2D1BEB9BE30040AE8C /* ActiveHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ADFA2C1BEB9BE30040AE8C /* ActiveHeader.xib */; settings = {ASSET_TAGS = (); }; };
 		44ADFA2F1BEBA1E70040AE8C /* DMActiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADFA2E1BEBA1E70040AE8C /* DMActiveHeaderView.swift */; settings = {ASSET_TAGS = (); }; };
 		44C1E4D41BE89A1D00390E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C1E4D31BE89A1D00390E39 /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		44653C2E1BEAE5F6003A0628 /* DMActiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMActiveModel.swift; sourceTree = "<group>"; };
 		448102831BEA04170002387F /* ActiveList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActiveList.storyboard; sourceTree = "<group>"; };
 		448102851BEA043B0002387F /* DMActiveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMActiveListViewController.swift; sourceTree = "<group>"; };
+		44A9E6451BEC45B900B02311 /* DMSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSettingViewController.swift; sourceTree = "<group>"; };
+		44A9E6491BEC50A000B02311 /* DMSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSettingCell.swift; sourceTree = "<group>"; };
 		44ADFA2C1BEB9BE30040AE8C /* ActiveHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActiveHeader.xib; sourceTree = "<group>"; };
 		44ADFA2E1BEBA1E70040AE8C /* DMActiveHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMActiveHeaderView.swift; sourceTree = "<group>"; };
 		44C1E4D01BE89A1D00390E39 /* DamaiPlayBusinessPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DamaiPlayBusinessPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44A9E6441BEC459C00B02311 /* Setting(系统设置) */ = {
+			isa = PBXGroup;
+			children = (
+				44A9E6451BEC45B900B02311 /* DMSettingViewController.swift */,
+				44A9E6491BEC50A000B02311 /* DMSettingCell.swift */,
+			);
+			name = "Setting(系统设置)";
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		44C1E4C71BE89A1D00390E39 = {
 			isa = PBXGroup;
 			children = (
@@ -154,16 +168,17 @@
 		44C1E5011BE89C2600390E39 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				44C1E50F1BE8A27E00390E39 /* Tools */,
-				44C1E5021BE89C2600390E39 /* ActiveList */,
+				44A9E6441BEC459C00B02311 /* Setting(系统设置) */,
+				44C1E50F1BE8A27E00390E39 /* Tools（工具） */,
+				44C1E5021BE89C2600390E39 /* ActiveList（项目列表） */,
 				44C1E5031BE89C2600390E39 /* CheckList */,
 				44C1E5041BE89C2600390E39 /* IndexPage */,
-				44C1E5051BE89C2600390E39 /* UserLogin */,
+				44C1E5051BE89C2600390E39 /* UserLogin（用户登录） */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		44C1E5021BE89C2600390E39 /* ActiveList */ = {
+		44C1E5021BE89C2600390E39 /* ActiveList（项目列表） */ = {
 			isa = PBXGroup;
 			children = (
 				448102831BEA04170002387F /* ActiveList.storyboard */,
@@ -173,6 +188,7 @@
 				44ADFA2C1BEB9BE30040AE8C /* ActiveHeader.xib */,
 				44ADFA2E1BEBA1E70040AE8C /* DMActiveHeaderView.swift */,
 			);
+			name = "ActiveList（项目列表）";
 			path = ActiveList;
 			sourceTree = "<group>";
 		};
@@ -190,7 +206,7 @@
 			path = IndexPage;
 			sourceTree = "<group>";
 		};
-		44C1E5051BE89C2600390E39 /* UserLogin */ = {
+		44C1E5051BE89C2600390E39 /* UserLogin（用户登录） */ = {
 			isa = PBXGroup;
 			children = (
 				44C1E50B1BE89F6500390E39 /* UserLogin.storyboard */,
@@ -198,15 +214,17 @@
 				44FA0A761BE9AFFD007495CE /* DMMValueAndVValue.swift */,
 				44FA0A7A1BE9ECD2007495CE /* DMUser.swift */,
 			);
+			name = "UserLogin（用户登录）";
 			path = UserLogin;
 			sourceTree = "<group>";
 		};
-		44C1E50F1BE8A27E00390E39 /* Tools */ = {
+		44C1E50F1BE8A27E00390E39 /* Tools（工具） */ = {
 			isa = PBXGroup;
 			children = (
 				442941411BE98C9200C1CD0F /* DMNetwork.swift */,
 				442941431BE98D6900C1CD0F /* UIColor+Extension.swift */,
 			);
+			name = "Tools（工具）";
 			path = Tools;
 			sourceTree = "<group>";
 		};
@@ -412,12 +430,14 @@
 			files = (
 				440990FD1BEB2AEB00836C7F /* DMActiveListTableViewCell.swift in Sources */,
 				442941421BE98C9200C1CD0F /* DMNetwork.swift in Sources */,
+				44A9E6461BEC45B900B02311 /* DMSettingViewController.swift in Sources */,
 				44C1E50E1BE89FAB00390E39 /* DMUserLoginViewController.swift in Sources */,
 				448102861BEA043B0002387F /* DMActiveListViewController.swift in Sources */,
 				44FA0A771BE9AFFD007495CE /* DMMValueAndVValue.swift in Sources */,
 				44653C2F1BEAE5F6003A0628 /* DMActiveModel.swift in Sources */,
 				44ADFA2F1BEBA1E70040AE8C /* DMActiveHeaderView.swift in Sources */,
 				44C1E4D41BE89A1D00390E39 /* AppDelegate.swift in Sources */,
+				44A9E64A1BEC50A000B02311 /* DMSettingCell.swift in Sources */,
 				442941441BE98D6900C1CD0F /* UIColor+Extension.swift in Sources */,
 				44FA0A7B1BE9ECD2007495CE /* DMUser.swift in Sources */,
 			);

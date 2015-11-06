@@ -14,7 +14,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ZNV-E4-uL8" userLabel="背景图片">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-IZ-m68" userLabel="用户头像">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-IZ-m68" userLabel="用户头像">
                     <rect key="frame" x="16" y="17" width="66" height="66"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="66" id="SHK-hd-Y9m"/>

@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 
 class DMActiveListViewController: UITableViewController {
     
+    ///设置
+    @IBAction func settingBtnClicked(sender: AnyObject) {
     
-    var user:DMUser?
+        let settingVC = DMSettingViewController()
+        navigationController?.pushViewController(settingVC, animated: true)
+        
+    }
     
-    var avtivityList:[DMActiveModel]?
+    private var avtivityList:[DMActiveModel]?
     
+    private var introduction:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +31,18 @@ class DMActiveListViewController: UITableViewController {
         ///加载数据
         self.loadData()
         
-        ///设置头部信息
-        self.setUpTableViewHeader()
-        
-    }
-    
-    
-    private func setUpTableViewHeader(){
-        
-        
-        
-        
     }
     
     ///加载列表数据
     func loadData(){
         
+       SVProgressHUD.show()
+        
        DMActiveModel.loadActiveList(1, pageSize: 10) { (acitiviList, being) -> () in
             self.avtivityList = acitiviList
+        
+        self.introduction = "\(being.abeing)个进行中的活动" + " | " + "\(being.allDone)个已结束的活动"
+            SVProgressHUD.dismiss()
             self.tableView.reloadData()
         }
 
@@ -53,8 +54,13 @@ class DMActiveListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerView = NSBundle.mainBundle().loadNibNamed("ActiveHeader", owner: self, options: nil).last as! UIView
+        let headerView = NSBundle.mainBundle().loadNibNamed("ActiveHeader", owner: self, options: nil).last as! DMActiveHeaderView
         
+        let user  = DMUser.getUser()
+        
+        headerView.userName.text = user.name
+        headerView.userImage.sd_setImageWithURL(NSURL(string: user.avatar))
+        headerView.introductionLabel.text = introduction
         return headerView
     }
 
@@ -83,8 +89,6 @@ class DMActiveListViewController: UITableViewController {
         
         cell.activitModel = model
         
-    print(model.imageUrl)
- 
         return cell
     }
     

@@ -10,11 +10,14 @@ import UIKit
 
 class DMActiveHeaderView: UIView {
     
+    
     @IBOutlet weak var introductionLabel: UILabel!
     
     @IBOutlet weak var userImage: UIImageView!
 
     @IBOutlet weak var userName: UILabel!
+    
+    
     
 
 }

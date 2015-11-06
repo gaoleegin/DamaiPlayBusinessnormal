@@ -35,6 +35,7 @@ class DMUser: NSObject ,NSCoding{
     /// 解档
     required init?(coder aDecoder: NSCoder) {
         avatarUrl = aDecoder.decodeObjectForKey("avatarUrl") as? NSURL
+        avatar = aDecoder.decodeObjectForKey("avatar") as? String
         isSponsor = aDecoder.decodeObjectForKey("isSponsor")as! Int
         name  = aDecoder.decodeObjectForKey("name")as! String
     }
@@ -42,9 +43,15 @@ class DMUser: NSObject ,NSCoding{
     /// 存档
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(avatarUrl, forKey: "avatarUrl")
+        aCoder.encodeObject(avatar, forKey: "avatar")
         aCoder.encodeObject(isSponsor, forKey: "isSponsor")
         aCoder.encodeObject(name, forKey: "name")
     }
+    
+    ///存放user的路径
+    static let userPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last?.stringByAppendingString("/DMUser.plist")
+    
+    
     
     ///加载用户的数据
     class func loadUserData(username:String,password:String,completion:(user:DMUser)->()) {
@@ -67,6 +74,8 @@ class DMUser: NSObject ,NSCoding{
                         let userdict = dict["data"] as! [String:AnyObject]
                         let user = DMUser(dict: userdict)
                         
+                        ///将user写入缓存
+                        NSKeyedArchiver.archiveRootObject(user, toFile: userPath!)
                         completion(user: user)
                     }
                 }
@@ -76,4 +85,13 @@ class DMUser: NSObject ,NSCoding{
         }
         
     }
+    
+    ///从缓存里面获取用户的数据
+    class func getUser()->DMUser{
+        let user = NSKeyedUnarchiver.unarchiveObjectWithFile(userPath!) as! DMUser
+        
+        return user
+    }
+    
+    
 }
