@@ -69,9 +69,13 @@ class DMMValueAndVValue: NSObject,NSCoding {
     /// 获取M值
     class func getMVValue()->(String){
         
-        let DMMValue = NSKeyedUnarchiver.unarchiveObjectWithFile(MVValuePath!) as! DMMValueAndVValue
+        let dmmValue = NSKeyedUnarchiver.unarchiveObjectWithFile(MVValuePath!)
         
-        return(DMMValue.MValue)
+        if dmmValue == nil {
+            return ""
+        }
+        
+        return((dmmValue as! DMMValueAndVValue).MValue)
     }
     
     ///获取V值
