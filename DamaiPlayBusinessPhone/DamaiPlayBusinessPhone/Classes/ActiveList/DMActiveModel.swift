@@ -60,15 +60,12 @@ class DMActiveModel: NSObject {
         
         DMNetwork.requestJSON(.GET, urlString,parameters:parameters as? [String : AnyObject]) { (JSON) in
             
-            print("返回的JSON数据\(JSON)")
-            
             let dict =  JSON as! [String:AnyObject]
             if let errCode = dict["errorCode"]{
                 if errCode as! Int != 0 {
                     SVProgressHUD.showInfoWithStatus(dict["error"] as! String)
                     return
                 } else{
-                    
                     
                     let obj = dict["obj"] as! [String:AnyObject]
                     

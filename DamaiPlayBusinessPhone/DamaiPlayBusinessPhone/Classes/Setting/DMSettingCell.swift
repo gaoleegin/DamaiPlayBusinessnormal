@@ -10,7 +10,7 @@ import UIKit
 
 class DMSettingCell: UITableViewCell {
 
-    private var titleLabel:UILabel?
+     var titleLabel:UILabel?
     
     private var lineView:UIView?
     
@@ -19,58 +19,42 @@ class DMSettingCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         //添加控件
+        selectionStyle = UITableViewCellSelectionStyle.None
         titleLabel = UILabel()
-        titleLabel?.textColor = UIColor.redColor()
-        titleLabel?.font = UIFont.systemFontOfSize(10)
-        titleLabel?.text = "系统设置"
-        titleLabel?.backgroundColor = UIColor.blueColor()
+        titleLabel?.textColor = UIColor.colorWithHex("514647")
+        titleLabel?.font = UIFont.systemFontOfSize(15)
         
+        titleLabel?.backgroundColor = UIColor.clearColor()
         contentView.addSubview(titleLabel!)
         
-        //定义一个约束的数组
-        var cons = [NSLayoutConstraint]()
-        
-       cons += NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[titleLabel(30)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["titleLabel":titleLabel!])
-        
-       cons += NSLayoutConstraint.constraintsWithVisualFormat("V:|-10-[titleLabel(10)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["titleLabel":titleLabel!])
         
         
-        contentView.addConstraints(cons)
+        titleLabel?.sizeToFit()
+  
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let titleLabelX:CGFloat = 16
+        
+        let titleLabelH:CGFloat = 20
+        
+        let titleLabelW:CGFloat = 100
+        
+        let titleLabelY:CGFloat = (60-titleLabelH) * 0.5
+        
+        titleLabel?.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH)
+        
+        
+        
+        
+        
+    }
+    
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    /*
-    var cons = [AnyObject]()
-    
-    // 将生成的约束数组追加到临时数组中
-    cons += NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[closeBtn(80)]-8-[saveBtn(80)]", options: NSLayoutFormatOptions(0), metrics: nil, views: ["closeBtn": closeBtn, "saveBtn": saveBtn])
-    cons += NSLayoutConstraint.constraintsWithVisualFormat("V:[closeBtn]-20-|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["closeBtn": closeBtn])
-    
-    /**
-    任意一个控件，都可以参照另外一个控件，设置准确的位置属性
-    
-    参数
-    1. 要设置约束的控件
-    2. 约束属性
-    3. 参照控件的关系
-    4. 参照哪一个控件
-    5. 被参照的约束属性
-    6. 参照的乘积
-    7. 约束数值
-    */
-    cons.append(NSLayoutConstraint(item: saveBtn, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: closeBtn, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0))
-    
-    // 2> 添加约束，自控件的约束，应该添加到父视图上
-    view.addConstraints(cons)
-    
-    */
-    
-    
-    
-    
 
 }

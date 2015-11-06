@@ -15,7 +15,49 @@ class DMSettingViewController: UITableViewController {
         
         //设置导航条
         self.setUpNavBar()
-
+        
+        //给tableview添加footerview
+        self.addFooterView()
+    }
+    
+    //给table添加footerview
+    private func addFooterView(){
+        
+        tableView.backgroundColor = UIColor.colorWithHex("f2f2f2")
+        
+        
+        let footerView = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 75))
+        
+        footerView.backgroundColor = UIColor.colorWithHex("f2f2f2")
+        
+        
+        let exitBtn = UIButton()
+        exitBtn.setTitle("退出登录", forState: UIControlState.Normal)
+        exitBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        exitBtn.backgroundColor = UIColor.redColor()
+        exitBtn.layer.cornerRadius = 15
+        exitBtn.clipsToBounds = true
+        
+        exitBtn.addTarget(self, action: "exit", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        let exitBtnX:CGFloat = 50
+        let exitBtnY:CGFloat = 35
+        let exitBtnH:CGFloat = 30
+        let exitBtnW:CGFloat = UIScreen.mainScreen().bounds.size.width-exitBtnX * 2
+        
+        exitBtn.frame = CGRectMake(exitBtnX, exitBtnY, exitBtnW, exitBtnH)
+        footerView.addSubview(exitBtn)
+        
+        tableView.tableFooterView = footerView
+        
+    }
+    
+    ///退出系统
+    func exit(){
+        
+        let loginsb = UIStoryboard(name: "UserLogin", bundle: nil)
+        let logingVC = loginsb.instantiateInitialViewController() as! DMUserLoginViewController
+        UIApplication.sharedApplication().keyWindow?.rootViewController = logingVC
     }
     
     ///设置导航条
@@ -48,62 +90,19 @@ class DMSettingViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 40;
+        return 60;
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = DMSettingCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellSetting")
         
-        
+        if (indexPath.row==0){
+            cell.titleLabel?.text = "意见反馈"
+        } else{
+            cell.titleLabel?.text = "关于我们"
+        }
 
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
